@@ -1,0 +1,32 @@
+.menu-bar{
+    width: 22%; 
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: fixed;
+}
+.title{
+    padding-left: 10px;
+    font-size: 26px;
+    font-family: 'Orbitron';
+    color: #ffff;
+}
+.nav-menu{
+    li:hover{
+        background-color: #0a5acf !important;
+        border-radius: 4px;
+        a{
+            color: #ffff !important;
+            padding-left: 25px;
+        }
+    }
+}
+.nav-menu-item{
+    a{
+        label{
+            padding-left: 10px;
+            font-size: 16px;
+            font-family: 'Orbitron';
+        }
+    }
+}
