@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'homepage',
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class HomepageComponent implements OnInit {
 
   applicationTitle:string="Crypto - Post";
-  constructor() { }
+  menuTitle:string='';
+  constructor(public _router:Router) { }
 
   ngOnInit(): void {
+    this._router.navigate(['/inbox']);
+    this.menuTitle='Inbox';
+  }
+
+  selectedMenu(selectedMenu : string){
+    this.menuTitle=selectedMenu;
   }
 
 }

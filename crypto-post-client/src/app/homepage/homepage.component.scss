@@ -2,8 +2,8 @@
     width: 22%; 
     height: 100%;
     min-height: 100vh;
-    position: relative;
-    display: fixed;
+    position: fixed;
+    display: inline-flex;
 }
 .title{
     padding-left: 10px;
@@ -29,4 +29,24 @@
             font-family: 'Orbitron';
         }
     }
+}
+.menu-header{
+    background-color:#212529;
+    height: 90px;
+    margin-left: 22%;
+    width: 78%;
+    position: fixed;
+    display: inline-block;
+    span{
+        padding: 28px;
+        position: absolute;
+    }
+}
+.menu-body{
+    min-height: 100vh;
+    margin-left: 22%;
+    padding: 10px;
+    width: 78%;
+    padding-top: 85px;
+    background-color: white;
 }
