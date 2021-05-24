@@ -4,6 +4,7 @@
     min-height: 100vh;
     position: fixed;
     display: inline-flex;
+    
 }
 .title{
     padding-left: 10px;
@@ -13,7 +14,7 @@
 }
 .nav-menu{
     li:hover{
-        background-color: #0a5acf !important;
+        background-color:#3282F7 !important;
         border-radius: 4px;
         a{
             color: #ffff !important;
@@ -49,4 +50,10 @@
     width: 78%;
     padding-top: 85px;
     background-color: white;
+}
+.nav-menu-item-active{
+    background-color: #0a5acf !important;
+    border-radius: 4px;
+     color: #ffff !important;
+        padding-left: 25px;
 }

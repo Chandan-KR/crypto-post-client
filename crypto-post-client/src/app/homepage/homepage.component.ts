@@ -10,6 +10,7 @@ export class HomepageComponent implements OnInit {
 
   applicationTitle:string="Crypto - Post";
   menuTitle:string='';
+  clicked: boolean = false;
   constructor(public _router:Router) { }
 
   ngOnInit(): void {
