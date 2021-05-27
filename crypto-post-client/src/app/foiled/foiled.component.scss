@@ -15,8 +15,43 @@ span{
 }
 .inbox-header{
     padding: 10px;
-    height: 45px;
+    height: 48px;
+    font-family: 'Orbitron';
 }
 .inbox-header-btn{
     margin-left: 10px;
+}
+.table-data-allign{
+    margin-left: 150px;
+}.select-all{
+    height: 36px;
+    padding: 11px;
+}
+
+span{
+    margin-left: 5px;
+    
+}
+.form-check-input {
+    margin-top: 6px;
+}
+.form-check-all-input{
+    margin-top: 10px !important;
+    width: 1em;
+    height: 1em;
+}
+.inbox-header{
+    padding: 9px;
+    height: 48px;
+    font-family: 'Orbitron';
+}
+.inbox-header-btn{
+    margin-left: 10px;
+}
+.tbl-tr{
+    color: black;
+    background-color: #c2dbff;
+}
+.table-data-allign{
+    margin-left: 150px;
 }

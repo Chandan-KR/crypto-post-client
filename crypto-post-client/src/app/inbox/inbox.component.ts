@@ -10,7 +10,7 @@ export class InboxComponent implements OnInit {
   checked: boolean = false;
   multipleSelected: boolean = false;
   posts: Posts[] = [];
-  
+  public index:any
 
   constructor() { }
 
@@ -41,6 +41,7 @@ export class InboxComponent implements OnInit {
     if(event.currentTarget.checked){
       this.posts.forEach((post)=>{
         post._checked = true;
+       
       })
     }else{
       this.posts.forEach((post)=>{
@@ -58,8 +59,9 @@ export class InboxComponent implements OnInit {
       this.posts[index]._checked = false;
     }
     this.seeAllChecked();
+    
   }
-
+  
   seeAllChecked(){
     this.checked = false;
     this.multipleSelected = false;
@@ -74,7 +76,11 @@ export class InboxComponent implements OnInit {
       this.multipleSelected = true;
     }
   }
+  refresh(){
+    alert("hiiiiii");
+  }
 }
+
 
   export  class Posts{
   constructor(public _from:string, public _subject:string, public _textbox:string, public _checked:boolean){}

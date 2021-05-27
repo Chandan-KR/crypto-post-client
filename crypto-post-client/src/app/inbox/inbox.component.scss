@@ -7,16 +7,46 @@ span{
     margin-left: 5px;
     
 }
+.btn:focus{
+    box-shadow:none !important;
+}
+.btn-refresh{
+padding: 0.325rem .75rem  !important;
+
+}
+svg{
+    width: 20px;
+        height: 20px;
+    &:hover{
+        background-color: lightgrey;
+        border-radius: 10px;
+        width: 26px;
+        height: 26px;
+    }
+}
 .form-check-input {
     margin-top: 6px;
 }
 .form-check-all-input{
-    margin-top: 10px;
+    margin-top: 10px !important;
+    width: 1em;
+    height: 1em;
 }
 .inbox-header{
-    padding: 10px;
-    height: 45px;
+    padding: 9px;
+    height: 48px;
+    font-family: 'Orbitron';
 }
 .inbox-header-btn{
     margin-left: 10px;
+}
+.tbl-tr{
+    color: black;
+    background-color: #c2dbff;
+}
+.table-data-allign{
+    margin-left: 150px;
+}
+.refresh{
+    margin-top:20px
 }
