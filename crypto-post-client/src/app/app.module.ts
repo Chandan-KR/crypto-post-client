@@ -10,6 +10,10 @@ import { OutboxComponent } from './outbox/outbox.component';
 import { FoiledComponent } from './foiled/foiled.component';
 import { TrashComponent } from './trash/trash.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ViewContentComponent } from './view-content/view-content.component';
+import { LoginComponent } from './login/login.component';
+import { HomeRoutingModule } from './homepage/home/home-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +24,16 @@ import { SettingsComponent } from './settings/settings.component';
     OutboxComponent,
     FoiledComponent,
     TrashComponent,
-    SettingsComponent
+    SettingsComponent,
+    ViewContentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
     
   ],
   providers: [],

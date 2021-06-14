@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-outbox',
@@ -9,8 +10,9 @@ export class OutboxComponent implements OnInit {
   checked: boolean = false;
   multipleSelected: boolean = false;
   posts: Posts[] = [];
+ 
   
-  constructor() { }
+  constructor( private _route:Router) { }
 
   ngOnInit(): void {
     this.getPosts();
@@ -67,6 +69,9 @@ export class OutboxComponent implements OnInit {
     if(checkedCount>1){
       this.multipleSelected = true;
     }
+  }
+  validatePassCode(){
+    this._route.navigate(['/veiw']);
   }
 }
 export  class Posts{

@@ -14,12 +14,15 @@ export class HomepageComponent implements OnInit {
   constructor(public _router:Router) { }
 
   ngOnInit(): void {
-    this._router.navigate(['/inbox']);
+   this._router.navigate(['/inbox']);
     this.menuTitle='Inbox';
   }
 
   selectedMenu(selectedMenu : string){
     this.menuTitle=selectedMenu;
   }
-
+  logout(){
+    this._router.navigate(['/login']);
+  }
+ 
 }

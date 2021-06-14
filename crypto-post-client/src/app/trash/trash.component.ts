@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trash',
@@ -11,7 +12,8 @@ export class TrashComponent implements OnInit {
   multipleSelected: boolean = false;
   posts: Posts[] = [];
   
-  constructor() { }
+  
+  constructor(private _route:Router) { }
 
   ngOnInit(): void {
     this.getPosts();
@@ -71,6 +73,9 @@ export class TrashComponent implements OnInit {
   }
   deleteAlert(){
     alert('Are you shour you want to delete permanently..!');
+  }
+  validatePassCode(){
+    this._route.navigate(['/veiw']);
   }
 }
 export  class Posts{

@@ -1,0 +1,54 @@
+<button id="openModal" #openModal [hidden]="true" 
+data-bs-toggle="modal" data-bs-target="#login-modal"></button>
+
+<div id="login-modal" class="modal fade" tabindex="-1" aria-labelledby="accetpPassCodeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+            <form [formGroup]="loginForm" class="needs-validation" (Submit)="login()">
+                <div class="modal-header">
+                    <h5 class="modal-title log-alert" id="accetpPassCodeLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">Username</span>
+                        <input type="text" class="form-control" formControlName="username" data-error="Please enter your username correctly." 
+                            aria-describedby="inputGroupPrepend" required/>
+                    </div>
+                    <div *ngIf="loginForm.controls.username.errors" class="help-block">
+                        <div *ngIf="loginForm.controls.username.errors.required && loginForm.controls.username.touched">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                              </svg>  Username is required</div>
+                      </div>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">Password</span>
+                        <input type="text" class="form-control"  formControlName="password" 
+                            aria-describedby="inputGroupPrepend" required/>
+                             </div>
+                             <div *ngIf="loginForm.controls.password.errors" class="help-block">
+                                
+                                <div *ngIf="loginForm.controls.password.errors.required && loginForm.controls.password.touched"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                                    <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                                    <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                  </svg>  password is required</div>
+                                
+                              </div>
+                              <div *ngIf="loginForm.controls.password.errors" class="help-block">
+                                 
+                              <div *ngIf="loginForm.controls.password.errors.minlength && loginForm.controls.password.dirty">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                                    <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                                    <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                  </svg>  password should be min 8 character</div>
+                              </div>
+                     </div> 
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">clear</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="login()" [disabled]="!loginForm.valid">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inbox',
@@ -12,7 +13,7 @@ export class InboxComponent implements OnInit {
   posts: Posts[] = [];
   public index:any
 
-  constructor() { }
+  constructor(private _route:Router) { }
 
   ngOnInit(): void {
     this.getPosts();
@@ -78,6 +79,9 @@ export class InboxComponent implements OnInit {
   }
   refresh(){
     alert("hiiiiii");
+  }
+  validatePassCode(){
+    this._route.navigate(['/veiw']);
   }
 }
 
